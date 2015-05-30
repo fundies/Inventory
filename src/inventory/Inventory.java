@@ -5,116 +5,103 @@ package inventory;
  * @author Greg Williamson
  * @version 0.1
  */
-public class Inventory
-{
+public class Inventory {
 
     private String name;
     private int quantity;
     private double price;
 
     /**
-     * Default Constructor
+     * Default Constructor.
      */
-    public Inventory()
-    {
+    public Inventory() {
         name = "";
         quantity = 0;
         price = 0.00;
     }
 
     /**
-     * Constructs inventory Item
+     * Constructs inventory Item.
      *
      * @param aName item name
      * @param aPrice item price
      * @param aQuantity item quantity
      */
-    public Inventory(String aName, double aPrice, int aQuantity)
-    {
+    public Inventory(final String aName, final double aPrice,
+            final int aQuantity) {
         name = aName;
         price = aPrice;
         quantity = aQuantity;
     }
 
     /**
-     * Get item name
+     * Get item name.
      *
      * @return item name
      */
-    public String getName()
-    {
+    public final String getName() {
         return name;
     }
 
     /**
-     * Get Item Price
+     * Get Item Price.
      *
      * @return price
      */
-    public double getPrice()
-    {
+    public final double getPrice() {
         return price;
     }
 
     /**
-     * Get Item Quantity
+     * Get Item Quantity.
      *
      * @return quantity
      */
-    public int getQuantity()
-    {
+    public final int getQuantity() {
         return quantity;
     }
 
     /**
-     * Set Item Name
+     * Set Item Name.
      *
      * @param newName item name
      */
-    public void setName(String newName)
-    {
+    public final void setName(final String newName) {
         name = newName;
     }
 
     /**
-     * Set the Price
+     * Set the Price.
      *
      * @param newPrice new price
      */
-    public void setPrice(double newPrice)
-    {
+    public final void setPrice(final double newPrice) {
         price = newPrice;
     }
 
     /**
-     * Set the Quantity
+     * Set the Quantity.
      *
      * @param newQuantity new quantity
      */
-    public void setQuantity(int newQuantity)
-    {
+    public final void setQuantity(final int newQuantity) {
         quantity = newQuantity;
     }
 
     /**
-     * Sold Some Items
+     * Sold Some Items.
      *
      * @param qtySold amount sold
      */
-    public void sold(int qtySold)
-    {
-        if (qtySold > quantity)
-        {
+    public final void sold(final int qtySold) {
+        if (qtySold > quantity) {
             System.out.println("Error: not enough in stock to fulfill order.");
             return;
-        } 
-        else
-        {
+        } else {
             quantity -= qtySold;
         }
 
-        if (quantity <= 2)
-        {
+        if (quantity <= 2) {
             System.out.println("Warning: low on quantity of " + name + " only "
                     + quantity + " left in stock!");
         }

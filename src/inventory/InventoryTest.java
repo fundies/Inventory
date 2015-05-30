@@ -13,23 +13,20 @@ import static org.junit.Assert.*;
  * @author Greg Williamson
  * @version 0.1
  */
-public class InventoryTest
-{
+public class InventoryTest {
 
     /**
-     * Default Constructor
+     * Default Constructor.
      */
-    public InventoryTest()
-    {
-        //webcat stop your bitching pls...
+    public InventoryTest() {
+        // webcat stop your bitching pls...
     }
 
     /**
      * Test of getName method, of class Inventory.
      */
     @Test
-    public void testGetName()
-    {
+    public final void testGetName() {
         System.out.println("getName");
         Inventory instance = new Inventory();
         instance.setName("herpderp");
@@ -40,8 +37,7 @@ public class InventoryTest
      * Test of getPrice method, of class Inventory.
      */
     @Test
-    public void testGetPrice()
-    {
+    public final void testGetPrice() {
         System.out.println("getPrice");
         Inventory instance = new Inventory("k", 1, 0);
         assertEquals(1, instance.getPrice(), 0.001);
@@ -51,8 +47,7 @@ public class InventoryTest
      * Test of getQuantity method, of class Inventory.
      */
     @Test
-    public void testGetQuantity()
-    {
+    public final void testGetQuantity() {
         System.out.println("getQuantity");
         Inventory instance = new Inventory("k", 1, 7);
         assertEquals(7, instance.getQuantity());
@@ -62,8 +57,7 @@ public class InventoryTest
      * Test of setName method, of class Inventory.
      */
     @Test
-    public void testSetName()
-    {
+    public final void testSetName() {
         System.out.println("setName");
         Inventory instance = new Inventory();
         instance.setName("wat");
@@ -74,8 +68,7 @@ public class InventoryTest
      * Test of setPrice method, of class Inventory.
      */
     @Test
-    public void testSetPrice()
-    {
+    public final void testSetPrice() {
         System.out.println("setPrice");
         Inventory instance = new Inventory();
         instance.setPrice(2.00);
@@ -86,8 +79,7 @@ public class InventoryTest
      * Test of setQuantity method, of class Inventory.
      */
     @Test
-    public void testSetQuantity()
-    {
+    public final void testSetQuantity() {
         System.out.println("setQuantity");
         Inventory instance = new Inventory();
         instance.setQuantity(8);
@@ -98,8 +90,7 @@ public class InventoryTest
      * Test of sold method, of class Inventory.
      */
     @Test
-    public void testSold()
-    {
+    public final void testSold() {
         System.out.println("sold");
         Inventory instance = new Inventory("things", 1.00, 4);
 
